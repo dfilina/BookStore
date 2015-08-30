@@ -50,6 +50,15 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8">
+          <!-- Alerts & Messages -->
+          <% if flash[:notice] %>
+            <div class="alert alert-success"><%= flash[:notice] %></div>
+          <% end %>
+
+          <% if flash[:alert] %>
+            <div class="alert alert-danger"><%= flash[:alert] %></div>
+          <% end %>
+
           <%= yield %>
         </div>
         <div class="col-md-4">
@@ -62,7 +71,7 @@
   <footer>
     <div class="container">
       <p>
-        Copyright &copy; 2015, All Rights Reserved 
+        Copyright &copy; 2015, All Rights Reserved
       </p>
     </div>
   </footer>
